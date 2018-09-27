@@ -8,7 +8,7 @@ class BreedsController < ApplicationController
   end
 
   def show
-    @breed = DogBreedFetcher.fetch(params[:id].gsub("-", "/"))
+    @breed = DogManager.fetch(params[:id].gsub("-", "/"))
   end
 
   private
